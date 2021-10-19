@@ -5,6 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    blog:[],
+    baseurl:"http://blog.solexy.cn"
   },
   mutations: {
   },

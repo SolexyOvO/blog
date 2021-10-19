@@ -14,7 +14,17 @@ export default {
   components: {
     BlogFooter,
   },
+  beforeMount(){
+    let _this = this
+    _this.$http.get(_this.$store.state.baseurl + "/getBlog").then(res => {
+      // console.log("_____________");
+      // console.log(res.body);
+      // console.log("_____________");
+      _this.$store.state.blog = res.body
+    })
+  }
 };
+
 </script>
 
 <style>

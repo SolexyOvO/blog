@@ -12,19 +12,19 @@
     >
       <el-menu-item index="2">
         <i class="el-icon-coffee-cup"></i>
-        <span slot="title">导航一</span>
+        <span slot="title">嘻</span>
       </el-menu-item>
       <el-menu-item index="2">
         <i class="el-icon-ship"></i>
-        <span slot="title">导航二</span>
+        <span slot="title">嘻</span>
       </el-menu-item>
       <el-menu-item index="2">
         <i class="el-icon-service"></i>
-        <span slot="title">导航三</span>
+        <span slot="title">哈</span>
       </el-menu-item>
       <el-menu-item index="2">
         <i class="el-icon-lollipop"></i>
-        <span slot="title">导航四</span>
+        <span slot="title">哈</span>
       </el-menu-item>
     </el-menu>
   </div>
@@ -46,13 +46,13 @@ export default {
 </script>
 
 <style>
-.nav-left {
+/* .nav-left {
   position: fixed;
   top: 100px;
   left: 50px;
   height: 100%;
   width: 110px;
-}
+} */
 .nav-menu {
   min-height: 800px;
   border-right: 0;

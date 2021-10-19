@@ -1,61 +1,73 @@
 <template>
-  <el-card class="box-card">
+<div class="blog-card" @click="$router.push({name: 'Blog',params:{id:blog.id}})">
+  <!-- <el-card class="box-card">
     <div slot="header" class="clearfix">
-        <el-link :underline="false" @click="$router.push({name: 'Blog',params:{id}})">{{title}}</el-link>
+        <el-link :underline="false" @click="$router.push({name: 'Blog',params:{id:blog.id}})">{{blog.title}}</el-link>
     </div>
     <div class="text item">
-      {{description}}
+      {{blog.description}}
     </div>
-  </el-card>
+  </el-card> -->
+  <!-- <nx-card
+  title="blog.title"
+  :description="blog.description"
+  ></nx-card> -->
+  <InforCard 
+      :frontTitle="blog.title"
+      :frontData="blog.description"
+      :backTitle="blog.title"
+      :backData="blog.description" />
+
+<template>
+  <v-card
+    class="mx-auto"
+    max-width="400"
+  >
+    <v-img
+      class="white--text align-end"
+      height="200px"
+      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+    >
+      <v-card-title>Top 10 Australian beaches</v-card-title>
+    </v-img>
+
+    <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>
+
+    <v-card-text class="text--primary">
+      <div>Whitehaven Beach</div>
+
+      <div>Whitsunday Island, Whitsunday Islands</div>
+    </v-card-text>
+  </v-card>
+</template>
+
+</div>
+
 </template>
 
 <script>
+import InforCard from 'vue-info-card'
 export default {
   name: "BlogCard",
-  props:['title','description','id']
+  props:['blog'],
+  components:{
+    InforCard
+  },
+  data(){
+    return{
+      blogcardimg:require('../../assets/logo.png')
+    }
+
+  },
 };
 </script>
 
 <style>
-.text {
-  font-size: 14px;
+.blog-card{
+  max-height: 600px;
+  margin-top: 10px;
 }
-
-.item {
-  margin-bottom: 18px;
+.infor-card{
+  max-height: 130px;
 }
-
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-}
-.clearfix:after {
-  clear: both;
-}
-
-.box-card{
-  width: 480px;
-  height: 200px!important;
-}
-.box-card{
-  background: url("../../assets/image/qft2.png");
-  /* position: fixed;
-  top: 0;
-  left: 0; */
-  width: 100%;
-  height: 100%;
-  min-width: 80px;
-  z-index: -9;
-  zoom: 1;
-  content: '';
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-position: center 0;
-  /* opacity:0.7; */
-}
-
 </style>

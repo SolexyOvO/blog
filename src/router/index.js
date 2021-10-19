@@ -22,7 +22,8 @@ const routes = [
     path: '/blogadd',
     name: "BlogAdd",
     component: BlogAdd
-  }
+  },
+ 
 ]
 
 const router = new VueRouter({

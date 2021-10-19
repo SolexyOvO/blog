@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carousel></carousel>
+    <!-- <carousel></carousel> -->
   </div>
 </template>
 
